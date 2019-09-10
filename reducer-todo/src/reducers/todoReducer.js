@@ -12,6 +12,11 @@ export const initialState = [{
     item: 'Call to Elon Musk',
     completed: true,
     id: 3892987591
+  },
+  {
+    item: 'Make something important',
+    completed: true,
+    id: 3892987592
   }
 ];
   
