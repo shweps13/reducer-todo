@@ -15,15 +15,26 @@ function TodoCards() {
   console.log(state);
 
   return (
-    <div className="TodoCards">
-      <div className="Main-Container">
-          {state.map((card) => (
-            <div className="Card" key={card.id}>
-              <h2>{card.item}</h2>
-              {card.completed === false && <Icon name='times rectangle' size='big' />}
-              {card.completed === true && <Icon name='check square outline' size='big' />}
-            </div>
-          ))}
+    <div className="CardBlock">
+      <div className="TodoForm">
+        <h2>Add new todo!</h2>
+        <input
+          type="text"
+          placeholder="New todo here"
+        />
+        <button>Add task</button>
+      </div>
+
+      <div className="TodoCards">
+        <div className="Main-Container">
+            {state.map((card) => (
+              <div className="Card" key={card.id}>
+                <h2>{card.item}</h2>
+                {card.completed === false && <Icon name='times rectangle' size='big' />}
+                {card.completed === true && <Icon name='check square outline' size='big' />}
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
