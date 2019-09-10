@@ -34,7 +34,7 @@ function TodoCards() {
 
       <div className="TodoCards">
         <div className="Main-Container">
-            {state.map((card) => (
+            {state.todoArray.map((card) => (
               <div className="Card" key={card.id}>
                 <h2>{card.item}</h2>
                 {card.completed === false && <Icon name='times rectangle' size='big' />}

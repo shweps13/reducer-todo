@@ -1,4 +1,5 @@
-export const initialState = [{
+export const initialState = {
+    todoArray: [{
     item: 'Learn about reducers',
     completed: false,
     id: 3892987589
@@ -18,10 +19,17 @@ export const initialState = [{
     completed: true,
     id: 3892987592
   }
-];
+]
+
+}
   
   export const todoReducer = (state, action) => {
     switch (action.type) {
+        case 'ADD_TODO':
+            return {
+              ...state,
+              editing: !state.editing
+            };
       default:
         return state;
     }
