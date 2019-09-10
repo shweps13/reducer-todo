@@ -27,8 +27,7 @@ export const initialState = {
     switch (action.type) {
         case 'ADD_TODO':
             return {
-              ...state,
-              editing: !state.editing
+                todoArray: [...state.todoArray, action.payload]
             };
       default:
         return state;

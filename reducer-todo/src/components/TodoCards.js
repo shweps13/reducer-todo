@@ -29,7 +29,7 @@ function TodoCards() {
           value={newTodo}
           onChange={handleChanges}
         />
-        <button onClick={() => dispatch({ type: 'ADD_TODO', payload: newTodo })}>Add task</button>
+        <button onClick={() => dispatch({ type: 'ADD_TODO', payload: {item: newTodo, completed: false, id: new Date()} })}>Add task</button>
       </div>
 
       <div className="TodoCards">
