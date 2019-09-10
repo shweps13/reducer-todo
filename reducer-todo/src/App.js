@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import TodoCards from './components/TodoCards'
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Reducer Todo App</h1>
       </header>
-      <div>
-        <p>App starts here</p>
-      </div>
+      <TodoCards />
     </div>
   );
 }
