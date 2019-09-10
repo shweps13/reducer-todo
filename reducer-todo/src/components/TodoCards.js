@@ -9,10 +9,14 @@ import { initialState, todoReducer } from '../reducers/todoReducer';
 
 function TodoCards() {
 
-  // const [newTodo, setNewTodo] = useState();
+  const [newTodo, setNewTodo] = useState();
 
   const [state, dispatch] = useReducer(todoReducer, initialState);
   console.log(state);
+
+  const handleChanges = e => {
+    setNewTodo(e.target.value);
+  };
 
   return (
     <div className="CardBlock">
@@ -21,8 +25,11 @@ function TodoCards() {
         <input
           type="text"
           placeholder="New todo here"
+          name="newToDo"
+          value={newTodo}
+          onChange={handleChanges}
         />
-        <button>Add task</button>
+        <button onClick={() => dispatch({ type: 'ADD_TODO', payload: newTodo })}>Add task</button>
       </div>
 
       <div className="TodoCards">
