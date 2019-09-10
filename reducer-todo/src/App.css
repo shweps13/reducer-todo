@@ -39,3 +39,7 @@
   background-color: rgb(255, 242, 226);
   padding: 1%;
 }
+.Main-Container {
+  display: flex;
+  justify-content: space-between;
+}
