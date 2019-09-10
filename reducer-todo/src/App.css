@@ -26,8 +26,16 @@
 .TodoCards {
   background-color: rgb(220, 242, 255);
   width: 80%;
-  margin: 3% 10%;
-  padding: 2% 0;
+  margin: 3% 8%;
+  padding: 2% 2%;
   border-radius: 10px;
   border: 1px solid lightgray;
+}
+
+.Card {
+  border: 1px solid lightsalmon;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgb(255, 242, 226);
+  padding: 1%;
 }
