@@ -37,9 +37,15 @@ function TodoCards() {
             {state.todoArray.map((card) => (
               <div className="Card" key={card.id}>
                 <h2>{card.item}</h2>
-                {card.completed === false && <Icon name='times rectangle' size='big' />}
-                {card.completed === true && <Icon name='check square outline' size='big' />}
+                <div>
+                {card.completed ? (
+                  <Icon name='check square outline' size='big' onClick={() => dispatch({ type: 'COMPLETED', payload: { cardID: card.id} })} />
+                ) : (
+                  <Icon name='times rectangle' size='big' onClick={() => dispatch({ type: 'COMPLETED', payload: { cardID: card.id} })} />
+                )}
+                </div>
               </div>
+             
             ))}
         </div>
       </div>

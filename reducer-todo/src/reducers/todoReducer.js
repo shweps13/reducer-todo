@@ -29,6 +29,16 @@ export const initialState = {
             return {
                 todoArray: [...state.todoArray, action.payload]
             };
+        case 'COMPLETED':
+            return {
+                todoArray: state.todoArray.map(card => {
+                    if (card.id === action.payload.cardID) {
+                        return {...card, completed: !card.completed}
+                    } else {
+                        return card
+                    }
+                })
+            };
       default:
         return state;
     }
