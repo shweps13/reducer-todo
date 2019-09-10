@@ -39,6 +39,12 @@ export const initialState = {
                     }
                 })
             };
+        case 'DELETE_COMPLETED':
+            return {
+                todoArray: state.todoArray.filter( card => 
+                    card.completed !== true
+                )
+            };
       default:
         return state;
     }

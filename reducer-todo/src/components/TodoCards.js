@@ -30,6 +30,9 @@ function TodoCards() {
           onChange={handleChanges}
         />
         <button onClick={() => dispatch({ type: 'ADD_TODO', payload: {item: newTodo, completed: false, id: new Date()} })}>Add task</button>
+        <div className="DelBtn">
+          <button onClick={() => dispatch({ type: 'DELETE_COMPLETED' })}>Delete completed tasks</button>
+        </div>
       </div>
 
       <div className="TodoCards">
