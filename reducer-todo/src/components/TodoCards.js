@@ -47,6 +47,9 @@ function TodoCards() {
                   <Icon name='times rectangle' size='big' onClick={() => dispatch({ type: 'COMPLETED', payload: { cardID: card.id} })} />
                 )}
                 </div>
+                <div className="RmvBtn">
+                  <button onClick={() => dispatch({ type: 'DELETE_CARD', payload: { cardNewID: card.id} })}>Remove task</button>
+                </div>
               </div>
              
             ))}

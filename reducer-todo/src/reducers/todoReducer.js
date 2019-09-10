@@ -45,6 +45,12 @@ export const initialState = {
                     card.completed !== true
                 )
             };
+        case 'DELETE_CARD':
+            return {
+                todoArray: state.todoArray.filter( card => 
+                    card.id !== action.payload.cardNewID
+                )
+            };
       default:
         return state;
     }
